@@ -1,18 +1,186 @@
-*{
- padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Variables css */
+:root {
+    --header-height: 3rem;
+    --footer-height: 3rem;
+
+    /* Colors */
+    --title-color: #fff;
+    --text-color: #5B5757;
+    --text-color-light: #8F8A8A;
+    --body-color: #066fa0;
+    --header-color: #02cb6a;
+    --footer-color: #f89b00;
+    --container-color: #dfdfdf;
+    --hover-link-color: #000;
+    --bg-menu-color: rgba(6, 111, 160, 0.1);
+
+    /* Font & typography */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* Margines */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    /* z-index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+* {
+    padding: 0;
     margin: 0;
 }
 
-body{
-    background-color: #f0f0f5;
-    font-family: 'Trebuchet MS';
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--body-color);
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
-h1{
-
+h1,h2,h3,h4,h5,h6 {
+    font-weight: var(--font-semi-bold);
 }
 
-.container.b-grid{
+header {
+    width: 100%;
+    display: flex;
+    height: var(--header-height);
+    background-color: var(--header-color);
+}
+
+main {
+    flex: 1 0 auto;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    box-sizing: border-box;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+footer {
+    flex-shrink: 0;
+    height: var(--footer-height);
+    background-color: var(--footer-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+.b-grid {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    gap: 0;
+}
+
+.container {
+    max-width: 100vw;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__link {
+    margin-left: var(--mb-4);
+}
+
+.nav__logo, .nav__link {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__logo:hover,
+.nav__link:hover,
+.menu__toggle:hover {
+    color: var(--hover-link-color);
+}
+
+.nav__link.active {
+    color: var(--hover-link-color);
+}
+
+.menu__controller {
+}
+
+.m-calendar {
+    background-color: var(--container-color);
+}
+
+.menu {
+    background-image: linear-gradient(to right, rgba(6, 111, 160, 1) 0%, rgba(6, 111, 160, .6) 100%), url('../img/Big Sur Aerial.jpg');
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.menu__toggle {
+    margin-top: var(--mb-2);
+    font-size: var(--h3-font-size);
+    cursor: pointer;
+    color: var(--title-color);
+}
+
+.menu__events{
+    margin-top: var(--mb-2);
+    color: var(--title-color) ;
+}
+
+.menu__bar h3 {
+    font-size: var(--h3-font-size);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

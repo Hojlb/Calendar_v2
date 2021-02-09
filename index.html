@@ -1,41 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Calendar version 2</title>
-    <link rel="stylesheet" href="./styles/master.css">
+	<meta charset="UTF-8">
+	<title>Calendar version 2</title>
+	<link rel="stylesheet" href="./styles/master.css">
+	<link type="text/css" href="./lib/jquery-ui-1.12.1.custom/jquery-ui.css"
+				rel="stylesheet"/>
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<div class="container b-grid">
-    <header class="header b-flex">
-        <nav class="nav__list">
-            <ul>
-                <li class="active"><a href="#">Main</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<h1 class="visually-hidden">Calendar by Max Polonsky</h1>
+<header>
+	<nav class="nav container">
+		<h2>
+			<a href="#" class="nav__logo">Portfolio page</a>
+		</h2>
+		<ul class="nav__list">
+			<li><a href="#" class="nav__link">Main</a></li>
+			<li><a href="#" class="nav__link active">Calendar</a></li>
+			<li><a href="#about" class="nav__link">About</a></li>
+		</ul>
 
-    <main class="b-grid">
-        <div class="menu__bar b-flex">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-        </div>
-        <div class="main__container b-grid">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam at doloremque ducimus esse fugit illo illum ipsum itaque laudantium nisi non nulla omnis quis quos rem, repellendus sint voluptate?</p>
-        </div>
-    </main>
+	</nav>
+</header>
 
-    <footer class="footer b-flex">
-        <p>About us</p>
+<main class="b-grid container">
+	<div class="menu">
+		<section class="menu__controller">
+			<div class="menu__toggle" id="menu-toggle">
+				<i class='bx bx-grid-alt'></i>
+			</div>
+			<div class="menu__events b-flex">
+				<a href="">
+					<i class='bx bx-slider-alt'></i>
+				</a>
+				<h3>New Event</h3>
+			</div>
+		</section>
+	</div>
 
-    </footer>
-</div>
+	<section class="m-calendar">
+		<div class="calendar__context b-grid">
+			<p>Calendar</p>
+		</div>
+	</section>
+
+</main>
+
+<footer class="">
+	<div class="container">
+		<p>About us</p>
+
+	</div>
+
+</footer>
+
+<script src="lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script srс="script/index.js"></script>
 </body>
 </html>
