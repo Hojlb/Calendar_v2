@@ -10,8 +10,8 @@
 </head>
 <body>
 <h1 class="visually-hidden">Calendar by Max Polonsky</h1>
-<header>
-	<nav class="nav container">
+<header class="b-flex">
+	<nav class="nav container b-flex">
 		<h2>
 			<a href="#" class="nav__logo">Portfolio page</a>
 		</h2>
@@ -24,24 +24,132 @@
 	</nav>
 </header>
 
-<main class="b-grid container">
-	<div class="menu">
-		<section class="menu__controller">
-			<div class="menu__toggle" id="menu-toggle">
-				<i class='bx bx-grid-alt'></i>
-			</div>
+<main class="b-grid">
+	<div class="menu container">
+		<section class="menu__controller ">
+				<span class="bx-icon menu__toggle" id="menu-toggle">
+					<i class='bx bx-grid-alt'></i>
+				</span>
 			<div class="menu__events b-flex">
-				<a href="">
-					<i class='bx bx-slider-alt'></i>
-				</a>
-				<h3>New Event</h3>
+				<!--TODO add 3d effect when hover on the button-->
+				<button class="menu__events__btn">
+						<span class="events__icon bx-icon">
+							<i class='bx bx-plus'></i>
+						</span>
+					<span>
+							<h3>New Event</h3>
+						</span>
+				</button>
 			</div>
 		</section>
+
+		<div class="mini-calendar"> <!-- "m-c" -->
+			<div class="b-flex m-c__month">
+				<span class="m-c__month__name">
+					Month
+				</span>
+				<div class="m-c__controller">
+					<span class="month-ctrl-up">
+							<i class='bx bx-up-arrow-alt'></i>
+					</span>
+					<span class="month-ctrl-down">
+							<i class='bx bx-down-arrow-alt'></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="m-c__table">
+				<div class="t-head-row ">
+					<span class="m-c__items">Пн</span>
+					<span class="m-c__items">Вт</span>
+					<span class="m-c__items">Ср</span>
+					<span class="m-c__items">Чт</span>
+					<span class="m-c__items">Пт</span>
+					<span class="m-c__items">Сб</span>
+					<span class="m-c__items">Вс</span>
+				</div>
+				<div class="t-row m-c-week">
+					<span class="m-c__items">1</span>
+					<span class="m-c__items">2</span>
+					<span class="m-c__items">3</span>
+					<span class="m-c__items">4</span>
+					<span class="m-c__items">5</span>
+					<span class="m-c__items">6</span>
+					<span class="m-c__items">7</span>
+				</div>
+				<div class="t-row m-c__week">
+					<span class="m-c__items">8</span>
+					<span class="m-c__items">9</span>
+					<span class="m-c__items">10</span>
+					<span class="m-c__items">11</span>
+					<span class="m-c__items">12</span>
+					<span class="m-c__items">13</span>
+					<span class="m-c__items">14</span>
+				</div>
+				<div class="t-row m-c__week">
+					<span class="m-c__items">15</span>
+					<span class="m-c__items">16</span>
+					<span class="m-c__items">17</span>
+					<span class="m-c__items">18</span>
+					<span class="m-c__items">19</span>
+					<span class="m-c__items">20</span>
+					<span class="m-c__items">21</span>
+				</div>
+				<div class="t-row m-c__week">
+					<span class="m-c__items">22</span>
+					<span class="m-c__items">23</span>
+					<span class="m-c__items">24</span>
+					<span class="m-c__items">25</span>
+					<span class="m-c__items">26</span>
+					<span class="m-c__items">27</span>
+					<span class="m-c__items">28</span>
+				</div>
+				<div class="t-row m-c__week">
+					<span class="m-c__items">1</span>
+					<span class="m-c__items">2</span>
+					<span class="m-c__items">3</span>
+					<span class="m-c__items">4</span>
+					<span class="m-c__items">5</span>
+					<span class="m-c__items">6</span>
+					<span class="m-c__items">7</span>
+				</div>
+				<div class="t-row m-c__week">
+					<span class="m-c__items">8</span>
+					<span class="m-c__items">9</span>
+					<span class="m-c__items">10</span>
+					<span class="m-c__items">11</span>
+					<span class="m-c__items">12</span>
+					<span class="m-c__items">13</span>
+					<span class="m-c__items">14</span>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<section class="m-calendar">
-		<div class="calendar__context b-grid">
-			<p>Calendar</p>
+	<section class="big-calendar">  <!--		"big-c"		-->
+		<div class="">
+			<div class="big-c__month">
+				<div class="big-c__controller">
+					<span class="month-ctrl-up">
+							<i class='bx bx-up-arrow-alt'></i>
+					</span>
+					<span class="month-ctrl-down">
+							<i class='bx bx-down-arrow-alt'></i>
+					</span>
+				</div>
+				<span>Month</span>
+				<span>Year</span>
+			</div>
+
+			<div class=" ">
+				<span class="big-c__items">Пн</span>
+				<span class="big-c__items">Вт</span>
+				<span class="big-c__items">Ср</span>
+				<span class="big-c__items">Чт</span>
+				<span class="big-c__items">Пт</span>
+				<span class="big-c__items">Сб</span>
+				<span class="big-c__items">Вс</span>
+			</div>
 		</div>
 	</section>
 
